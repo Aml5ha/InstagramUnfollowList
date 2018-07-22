@@ -1,3 +1,4 @@
+#Made by Arman Lokhandwala 07/2018
 import os.path
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -159,5 +160,5 @@ driver, username = Setup() #sets driver, username to the results of the Setup me
 followers = GetFollowersList(driver, username) #gets a list of people that follow you
 following = GetFollowingList(driver, username) #gets a list of people you are following
 people_to_unfollow(following, followers) #compares the two lists and prints people that don't follow you to a file
-print("Total time taken: " + str(time.time() - start)) #prints total time taken
+print("Total time taken: " + "{0:.2f}".format(time.time() - start)) #prints total time taken
 driver.quit()
